@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Explore the city of Hyderabad">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgb(59, 138, 241);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-bottom: 2px solid rgb(1, 24, 54);
+        }
+        .nav-link {
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #4f7549;
+            padding: 10px 0px;
+            margin: 0px 10px;
+            display: inline-block;
+            position: relative;
+            opacity: 0.75;
+        }
+        .nav-link:hover {
+            opacity: 1;
+        }
+        .nav-link::before {
+            transition: 300ms;
+            height: 5px;
+            content: "";
+            position: absolute;
+            background-color: #355a3b;
+        }
+        .nav-link-ltr::before {
+            width: 0%;
+            bottom: 5px;
+        }
+        .nav-link-ltr:hover::before {
+            width: 100%;
+        }
+        header {
+            font-weight: bolder;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .logo {
+            border-radius: 50%;
+            height: 50px;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider img {
+            width: 100%;
+            height: 400px; 
+            object-fit: cover; 
+        }
+
+        .slider input {
+            display: none;
+        }
+
+        .slider-label {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .slider input:checked + .slider .slide-1 {
+            transform: translateX(0);
+        }
+
+        .slider input:checked + .slider .slide-2 {
+            transform: translateX(-100%);
+        }
+
+        .slider input:checked + .slider .slide-3 {
+            transform: translateX(-200%);
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+        }
+
+        .item {
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <nav>
+            
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="item"><img src="kali.jpg"
+                height="300" width="400"></div>
+        <div class="item"><img src="logo.png" height="300"
+                width="400"></div>
+        <div class="item"><img src="pillar.jpeg"height="300" width="400"></div>
+    </div>
+    <div class="container">
+        <div class="item"><img src="warafort.jpg"
+                height="300" width="400"></div>
+        <div class="item"><img src="logo.png" height="300"
+                width="400"></div>
+        <div class="item"><img src="ramappa.jpeg"height="300" width="400"></div>
+    </div>
+    <div class="container">
+        <div class="item"><img src="kali.jpg"
+                height="300" width="400"></div>
+        <div class="item"><img src="logo.png" height="300"
+                width="400"></div>
+        <div class="item"><img src="waterfall.jpeg"height="300" width="400"></div>
+    </div>
+  
+
+</body>
+</html>
