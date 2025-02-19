@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    html {
+        box-sizing: border-box;
+      }
+      
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+      
+      body {
+        font-family: sans-serif;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .container {
+        max-width: 90%;
+        margin: 0 auto;
+        text-align: center;
+      }
+      
+      .target {
+        display: block;
+        max-width: 50%;
+        height: auto;
+        margin: 0 auto;
+      }
+      
+      .alpha-target {
+        mask-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/234228/alpha-cat.png);
+        mask-mode: alpha;
+        mask-repeat: no-repeat;
+        mask-size: 80%;
+      }
+      
+        </style>
+</head>
+<body>
+    <div class="container">
+        <article class="alpha-mask">
+          <h2>Alpha Mask</h2>
+          <img class="target alpha-target" src="warafort.jpg">
+        </article>
+</body>
+</html>
