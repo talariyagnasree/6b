@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+h2{
+    text-align: center;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#C8A2D6;
+    height: 550px;
+    max-width: 350px;
+    flex-direction: column;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 20px;
+
+}
+.display{
+    width: 90%;
+    height: 90px;
+    font-size: 50px;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-top: auto;
+    background-color: #a08ddd;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4,80px);
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-top: auto;
+    gap: 10px;
+}
+.num{
+    background-color:#E4C6E7;
+    color: white;
+    border-color: none;
+    border-radius:15%;
+    width : 80px;
+    height : 80px;
+
+    font-size: 30px;
+    border-color:  #B9AEDC;
+
+}
+.num:hover{
+        background-color: #a08ddd;
+    }
+
+.opr{
+    background-color: #B9AEDC;
+    color: white;
+    border-color: none;
+    border-radius:15%;
+    width : 80px;
+    height : 80px;
+    font-size: 30px;
+    border-color: #E4C6E7;
+}
+.opr:hover{
+        background-color: #9783db;
+    }
+
+</style>
+<body>
+    <h2>Calculator</h2>
+    <div class = "flex-container">
+        <input type = "text" class = "display" value = "  " readonly>
+        <div class ="container">
+            <input type = "button" value = "1" class = "num" onclick = "display.value += '1'">
+            <input type = "button" value = "2" class = "num" onclick = "display.value += '2'">
+            <input type = "button" value = "3" class = "num" onclick = "display.value += '3'">
+            <input type = "button" value = "+" class = "opr" onclick = "display.value += '+'">
+            <input type = "button" value = "4" class = "num" onclick = "display.value += '4'">
+            <input type = "button" value = "5" class = "num" onclick = "display.value += '5'">
+            <input type = "button" value = "6" class = "num" onclick = "display.value += '6'">
+            <input type = "button" value = "-" class = "opr" onclick = "display.value += '-'">
+            <input type = "button" value = "7" class = "num" onclick = "display.value += '7'">
+            <input type = "button" value = "8" class = "num" onclick = "display.value += '8'">
+            <input type = "button" value = "9" class = "num" onclick = "display.value += '9'">
+            <input type = "button" value = "*" class = "opr" onclick = "display.value += '*'">
+            <input type = "button" value = "0" class = "num" onclick = "display.value += '0'">
+            <input type = "button" value = "C" class = "opr" onclick = "display.value = ''">
+            <input type = "button" value = "=" class = "opr" onclick = "display.value = eval(display.value)">
+            <input type = "button" value = "/" class = "opr" onclick = "display.value += '/'">
+        </div>     
+    </div>
+ 
+</body>
+</html>
